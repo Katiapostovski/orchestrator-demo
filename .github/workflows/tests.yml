@@ -1,0 +1,16 @@
+name: CI Tests
+
+on:
+  pull_request:
+
+jobs:
+  example-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run fake tests
+        run: |
+          echo "Running fake tests..."
+          sleep 5
+          echo "Tests passed!"
